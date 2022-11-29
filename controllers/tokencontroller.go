@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	auth "www.github.com/N4choWasTaken/Go-API-JWT/controllers/middleware"
+	"www.github.com/N4choWasTaken/Go-API-JWT/auth"
 	db "www.github.com/N4choWasTaken/Go-API-JWT/database"
 	"www.github.com/N4choWasTaken/Go-API-JWT/database/models"
 )
