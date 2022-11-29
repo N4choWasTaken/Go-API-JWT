@@ -1,14 +1,11 @@
 package main
 
 import (
-	"log"
-	"net/http"
-
-	"www.github.com/N4choWasTaken/Go-API-JWT/login"
+	db "www.github.com/N4choWasTaken/Go-API-JWT/database"
 )
 
 func main() {
-	http.HandleFunc("/login", login.Login)
-
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	// Initialize Database
+	db.Connect("host=localhost user=postgres password=mysecretpassword dbname=postgres port=5455 sslmode=disable")
+	db.Migrate()
 }
